@@ -1,6 +1,7 @@
 #!/bin/bash
 
 BINARY=icad
+BINARY_U=ununifid
 CHAIN_DIR=./data
 CHAINID_1=test-1
 CHAINID_2=test-2
@@ -16,4 +17,4 @@ $BINARY start --log_level trace --log_format json --home $CHAIN_DIR/$CHAINID_1 -
 
 echo "Starting $CHAINID_2 in $CHAIN_DIR..."
 echo "Creating log file at $CHAIN_DIR/$CHAINID_2.log"
-$BINARY start --log_level trace --log_format json --home $CHAIN_DIR/$CHAINID_2 --pruning=nothing --grpc.address="0.0.0.0:$GRPCPORT_2" --grpc-web.address="0.0.0.0:$GRPCWEB_2" > $CHAIN_DIR/$CHAINID_2.log 2>&1 &
+$BINARY_U start --log_level trace --log_format json --home $CHAIN_DIR/$CHAINID_2 --pruning=nothing --grpc.address="0.0.0.0:$GRPCPORT_2" --grpc-web.address="0.0.0.0:$GRPCWEB_2" > $CHAIN_DIR/$CHAINID_2.log 2>&1 &

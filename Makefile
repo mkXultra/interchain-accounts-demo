@@ -149,3 +149,4 @@ kill-dev:
 	@echo "Killing icad and removing previous data"
 	-@rm -rf ./data
 	-@killall icad 2>/dev/null
+	-@killall ununifid 2>/dev/null
